@@ -10,12 +10,12 @@ jobs:
      - uses: microsoft/setup-msbuild@v1
        
      - name: git
-       run: git clone https://github.com/ON5HB/rsp_tcp_v2
+       run: git clone https://github.com/funnymdzz/rsp_tcp_v2 && unzip SDRplay.zip
        
      - name: nuget
        working-directory: rsp_tcp_v2
        run:  nuget restore 
-            
+    
      - name: Build
        working-directory: rsp_tcp_v2     
        run: msbuild rsp_tcp.vcxproj
