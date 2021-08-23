@@ -14,7 +14,7 @@ jobs:
        
      - name: nuget
        working-directory: rsp_tcp_v2
-       run:  msbuild -t:restore
+       run:  nuget restore 
             
      - name: Build
        working-directory: rsp_tcp_v2     
