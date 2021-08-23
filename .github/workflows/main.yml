@@ -11,6 +11,10 @@ jobs:
        
      - name: git
        run: git clone https://github.com/ON5HB/rsp_tcp_v2
+       
+     - name: nuget
+       working-directory: rsp_tcp_v2
+       run:  msbuild -t:restore
             
      - name: Build
        working-directory: rsp_tcp_v2     
