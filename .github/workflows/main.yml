@@ -7,7 +7,12 @@ jobs:
     runs-on: windows-2016        
     steps:
      - uses: actions/checkout@v2
-     - uses: microsoft/setup-msbuild@v1      
+     - uses: microsoft/setup-msbuild@v1
+       
+     - name: git
+       run: git clone https://github.com/ON5HB/rsp_tcp_v2
+            
      - name: Build
        working-directory: rsp_tcp_v2     
        run: msbuild rsp_tcp.vcxproj
+
