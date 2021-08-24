@@ -14,7 +14,7 @@ jobs:
        
      - name: nuget
        working-directory: rsp_tcp_v2
-       run:  nuget restore 
+       run:  nuget restore && ls C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
     
      - name: Build
        working-directory: rsp_tcp_v2     
